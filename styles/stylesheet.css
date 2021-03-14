@@ -5,6 +5,7 @@
       --clr-grayBlue: hsl(229, 7%, 55%);
       --clr-darkBlue: hsl(228, 56%, 26%);
       --clr-veryDarkBlue: hsl(229, 57%, 11%);
+      --clr-pinkGradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
 }
 
 /* global styles */
@@ -18,9 +19,102 @@
 }
 
 body {
-      font-family: 'Raleway', sans-serif;
+      font-family: "Raleway", sans-serif;
 }
 
 p {
       font-size: 14px;
+      color: var(--clr-paleBlue);
+      margin-bottom:1rem;
+}
+
+/* main  */
+.main {
+      width: 100%;
+      height: 100vh;
+      background: url(../images/bg-mobile.png) no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+}
+
+/* fylo section */
+
+.fylo,
+.storage {
+      background: var(--clr-darkBlue);
+      width: 90%;
+      border-radius: 0.65rem;
+}
+
+.fylo {
+      border-top-right-radius: 6.25rem;
+}
+
+.fylo-inner {
+      padding: 2.5rem;
+}
+
+.fylo-links {
+      display: flex;
+      margin-top: 2rem;
+}
+
+.fylo-links > div {
+      background-color: var(--clr-veryDarkBlue);
+      height: 3.125rem;
+      width: 3.125rem;
+      padding: 1rem;
+      border-radius: 0.65rem;
+}
+
+.fylo-links > div:nth-of-type(2) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+}
+
+.file-img {
+      background: url(../images/icon-document.svg) center no-repeat;
+}
+
+.document-img {
+      background: url(../images/icon-folder.svg) center no-repeat;
+}
+
+.upload-img {
+      background: url(../images/icon-upload.svg) center no-repeat;
+}
+
+.fylo-links img:nth-of-type(2) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+}
+
+/* storage section  */
+.storage-inner {
+      padding: 2.5rem;
+      text-align:center;
+}
+
+.storage p .gb {
+      font-weight: bold;
+}
+
+.storage-bar-out {
+      height: 20px;
+      width: 100%;
+      background: var(--clr-veryDarkBlue);
+      border-radius: 50px;
+      margin: auto;
+      margin-bottom:1rem;
+}
+
+.storage-bar-inner {
+      height: 16px;
+      width: 81.25%;
+      background: linear-gradient(var(--clr-pinkGradient));
+      border-radius: 50px;
 }
