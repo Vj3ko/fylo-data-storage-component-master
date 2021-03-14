@@ -1,0 +1,26 @@
+/* variables */
+
+:root {
+      --clr-paleBlue: hsl(243, 100%, 93%);
+      --clr-grayBlue: hsl(229, 7%, 55%);
+      --clr-darkBlue: hsl(228, 56%, 26%);
+      --clr-veryDarkBlue: hsl(229, 57%, 11%);
+}
+
+/* global styles */
+
+*,
+*::before,
+*::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: 'Raleway', sans-serif;
+}
+
+p {
+      font-size: 14px;
+}
