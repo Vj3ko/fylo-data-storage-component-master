@@ -20,11 +20,43 @@
                   href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
                   rel="stylesheet"
             />
-            <link rel="stylesheet" href="./styles/stylesheet.css">
+            <link rel="stylesheet" href="./styles/stylesheet.css" />
 
             <title>Frontend Mentor | Fylo data storage component</title>
       </head>
       <body>
-            You’ve used 815 GB of your storage 185 GB Left 0 GB 1000 GB
+            <main class="main">
+                  <section class="fylo">
+                        <div class="fylo-inner">
+                              <div class="fylo-logo">
+                                    <img
+                                          src="./images/logo.svg"
+                                          alt="fylo data storage logo"
+                                    />
+                              </div>
+                              <div class="fylo-links">
+                                    <div class="file-img"></div>
+                                    <div class="document-img"></div>
+                                    <div class="upload-img"></div>
+                              </div>
+                        </div>
+                  </section>
+
+                  <section class="storage">
+                        <div class="storage-inner">
+                              <p>You’ve used <span class="gb">815 GB</span> of your storage</p>
+                        <div class="storage-bar-out">
+                              <div class="storage-bar-inner"></div>
+                        </div>
+                        <div class="storage-space">
+                              <div class="storage-space-left">0 GB</div>
+                              <div class="storage-space-right">1000 GB</div>
+                        </div>
+                        <div class="storage-overlay">
+                              <span>185</span>GB LEFT
+                        </div>
+                        </div>
+                  </section>
+            </main>
       </body>
 </html>
