@@ -6,6 +6,7 @@
       --clr-darkBlue: hsl(228, 56%, 26%);
       --clr-veryDarkBlue: hsl(229, 57%, 11%);
       --clr-pinkGradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+      --border-radius: 0.625rem;
 }
 
 /* global styles */
@@ -19,21 +20,40 @@
 }
 
 body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100vw;
+      background-color: #0c122c;
       font-family: "Raleway", sans-serif;
+}
+
+body::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 100%;
+      background-image: url(/images/bg-mobile.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
 }
 
 p {
       font-size: 14px;
       color: var(--clr-paleBlue);
-      margin-bottom:1rem;
+      margin-bottom: 1rem;
 }
 
 /* main  */
+
 .main {
       width: 100%;
-      height: 100vh;
-      background: url(../images/bg-mobile.png) no-repeat;
-      background-size: cover;
+      max-width: 31.25rem;
+      margin: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -47,7 +67,8 @@ p {
 .storage {
       background: var(--clr-darkBlue);
       width: 90%;
-      border-radius: 0.65rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.3);
 }
 
 .fylo {
@@ -68,7 +89,7 @@ p {
       height: 3.125rem;
       width: 3.125rem;
       padding: 1rem;
-      border-radius: 0.65rem;
+      border-radius: var(--border-radius);
 }
 
 .fylo-links > div:nth-of-type(2) {
@@ -96,7 +117,8 @@ p {
 /* storage section  */
 .storage-inner {
       padding: 2.5rem;
-      text-align:center;
+      text-align: center;
+      position: relative;
 }
 
 .storage p .gb {
@@ -106,15 +128,102 @@ p {
 .storage-bar-out {
       height: 20px;
       width: 100%;
-      background: var(--clr-veryDarkBlue);
-      border-radius: 50px;
+      background: hsl(227, 57%, 18%);
+      border: 3px solid hsl(227, 57%, 18%);
+      border-radius: 3.125rem;
       margin: auto;
-      margin-bottom:1rem;
+      margin-bottom: 1rem;
 }
 
 .storage-bar-inner {
-      height: 16px;
-      width: 81.25%;
+      height: 100%;
+      width: 75%;
       background: linear-gradient(var(--clr-pinkGradient));
-      border-radius: 50px;
+      border-radius: 3.125rem;
+      position: relative;
+}
+
+.storage-circle {
+      height: 10px;
+      width: 10px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      right: 2px;
+      top: 2px;
+}
+
+.storage-space {
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+}
+
+.storage-overlay {
+      position: absolute;
+      padding: 1.125rem;
+      background: #fff;
+      font-size: 0.8125rem;
+      font-weight: bold;
+      color: var(--clr-grayBlue);
+      border-radius: var(--border-radius);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.storage-overlay span {
+      font-size: 1.875rem;
+      font-weight: bold;
+      margin-right: 0.625rem;
+      color: black;
+}
+
+/* responsive  */
+
+@media screen and (min-width: 62.5rem) {
+      body::after {
+            background-image: url(/images/bg-desktop.png);
+            height: 50%;
+      }
+      .main {
+            flex-direction: row;
+            max-width: 58.125rem;
+            gap: 2rem;
+            align-items: flex-end;
+      }
+      .fylo,
+      .storage {
+            width: 100%;
+      }
+      .fylo {
+            flex-basis: 65%;
+      }
+      .storage-inner {
+            text-align: left;
+            padding: 2rem;
+      }
+      .storage-overlay {
+            padding: 0.875rem 1.6875rem;
+            top: -20%;
+            left: 77%;
+            white-space: nowrap;
+      }
+      .storage-overlay::after {
+            content: "";
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            background: #fff;
+            bottom: -1rem;
+            right: 0;
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+      }
+      .storage-space {
+            margin: 0;
+      }
 }
