@@ -90,6 +90,13 @@ p {
       width: 3.125rem;
       padding: 1rem;
       border-radius: var(--border-radius);
+      transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+}
+
+.fylo-links > div:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      transform: scale(1.1);
 }
 
 .fylo-links > div:nth-of-type(2) {
