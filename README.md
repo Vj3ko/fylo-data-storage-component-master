@@ -2,8 +2,8 @@
 
 ### Links
 
-- Solution URL: 
-- Live Site URL: 
+- Solution URL: https://www.frontendmentor.io/solutions/fylo-data-storage-challenge-mobile-first-approach-NLzWv3wr9
+- Live Site URL: https://fylo-data-storage-component-master-three-blush.vercel.app/
 - Github repository: https://github.com/Frontend-Mentor-projects/fylo-data-storage-component-master
 
 ### Built with
